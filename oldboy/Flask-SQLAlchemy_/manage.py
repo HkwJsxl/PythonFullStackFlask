@@ -15,3 +15,9 @@ manager.add_command('db', MigrateCommand)
 
 if __name__ == '__main__':
     manager.run()
+
+    """
+    python3 manage.py db init 初始化  # 只执行一次，创建migrations文件夹
+    python3 manage.py db migrate  # 等同于 makemigartions
+    python3 manage.py db upgrade  # 等同于migrate
+    """
