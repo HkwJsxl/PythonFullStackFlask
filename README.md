@@ -1549,21 +1549,3 @@ class ImagesView(ModelView):
 ~~~python
 Flask自带了记录日志的功能，直接app.loger
 ~~~
-
-# 报错解决
-
-> `AttributeError: 'tuple' object has no attribute 'drivername'`
-
-复制粘贴时，手误多了一个逗号，所以导致报错
-
-![image-20230223170231759](https://img2023.cnblogs.com/blog/2570053/202302/2570053-20230223170233256-1491266760.png)
-
-> 安装`flask_migrate`包内没有`MigrateCommand`
-
-`from flask_migrate import Migrate, MigrateCommand`
-
-原因是`flask_migrate`高版本不再支持`MigrateCommand`，降低版本即可
-
-`pip install flask_migrate==2.7.0`
-
-
